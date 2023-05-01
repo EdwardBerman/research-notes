@@ -1,0 +1,117 @@
+%-----------------------Homework------------------------------------
+%-------------------Arman Shokrollahi---------------------------------
+%---------------------Coding Theory-------------------------------
+
+\documentclass[a4 paper]{article}
+% Set target color model to RGB
+\usepackage[inner=1.5cm,outer=1.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{pythonhighlight}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{pdfpages}
+\usepackage{verbatim}
+\usepackage{amsgen,amsmath,amstext,amsbsy,amsopn,tikz,amssymb,tkz-linknodes}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, urlcolor=blue,  linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{rotating}
+%\usetikzlibrary{through,backgrounds}
+\hypersetup{%
+pdfauthor={Arman Shokrollahi},%
+pdftitle={Homework},%
+pdfkeywords={Tikz,latex,bootstrap,uncertaintes},%
+pdfcreator={PDFLaTeX},%
+pdfproducer={PDFLaTeX},%
+}
+%\usetikzlibrary{shadows}
+\usepackage[francais]{babel}
+\usepackage{booktabs}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+      \newtheorem{thm}{Theorem}[section]
+      \newtheorem{prop}[thm]{Proposition}
+      \newtheorem{lem}[thm]{Lemma}
+      \newtheorem{cor}[thm]{Corollary}
+      \newtheorem{defn}[thm]{Definition}
+      \newtheorem{rem}[thm]{Remark}
+      \numberwithin{equation}{section}
+
+\newcommand{\homework}[6]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{\vspace{2mm}
+    \hbox to 6.28in { {\bf JWST Project \hfill} }
+       \vspace{6mm}
+       \hbox to 6.28in { {\Large \hfill #1 (#2)  \hfill} }
+       \vspace{6mm}
+       \hbox to 6.28in { {\it Instructor: #3 \hfill Student: #5} }
+       %\hbox to 6.28in { {\it TA: #4  \hfill #6}}
+      \vspace{2mm}}
+   }
+   \end{center}
+   \markboth{#5 -- #1}{#5 -- #1}
+   \vspace*{4mm}
+}
+
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bepsilon}{\boldsymbol{\epsilon}}
+\newcommand{\balpha}{\boldsymbol{\alpha}}
+\newcommand{\bbeta}{\boldsymbol{\beta}}
+\newcommand{\0}{\mathbf{0}}
+
+\begin{document}
+\homework{Meeting Notes \#4}{due 03/15/23 }{McCleary}{}{Eddie Berman}{}
+{\begin{tikzpicture}[outline/.style={draw=#1,thick,fill=#1!50}]
+\node [outline=red] at (0,1) {\bf Agenda};
+\end{tikzpicture}}
+\begin{enumerate}
+    \item Attempts to plot residuals
+    \item Went to SUMS
+    \item Using a class project to do something useful for research
+    \item Reading
+\end{enumerate}
+
+\noindent {\fbox{\it Residuals Plot}}\\ 
+\begin{python}
+# Tried to get MasterDiagnotics Working
+\end{python}
+\noindent {\fbox{\it SUMS}}\\
+\newline
+Lot of fun. Hope to present again soon.\\ \newline
+\noindent {\fbox{\it Useful Class Project / Formulating Concrete Plan}\\ \newline
+Help formulating relationship between $\theta$ and $\eta$ to $\left[A, g_1, g_2, s, u_c, v_c \right]$\\
+    Does $\frac{s}{\sqrt{1 - \left(g_1\right)^2 - \left(g_2\right)^2}}\begin{bmatrix}
+    1 + g_1 & g_2\\
+    g_2 & 1 - g_1
+    \end{bmatrix} = \begin{bmatrix}
+    \cosh \frac{1}{2}\eta + \cos \theta \sinh \frac{1}{2}\eta & \sin \theta \sinh \frac{1}{2} \eta\\
+    \sin \theta \sinh \frac{1}{2} \eta & \cosh \frac{1}{2}\eta - \cos \theta \sinh \frac{1}{2}\eta
+    \end{bmatrix} $ and $s = T$ for that one plot or $s = \mid \eta_2 \mid?$ \\
+    Moreover, elliptical Gaussian's takes the form $f(x,y) = Ae^{-(a(x - x_0)^2 + 2b(x - x_0)(y - y_0) + c(y - y_0)^2)}$ with matrix representation $\begin{bmatrix}
+    a & b\\
+    b & c
+    \end{bmatrix}$ where $a = \frac{\cos ^2 \theta }{2\sigma^2_X} +  \frac{\sin ^2 \theta }{2\sigma^2_Y}$, $b = -\frac{\sin 2\theta}{4\sigma^2_X} + \frac{\sin 2\theta}{4\sigma^2_Y}$, $c = \frac{\sin ^2 \theta }{2\sigma^2_X} +  \frac{\cos ^2 \theta }{2\sigma^2_Y}$. $T = 2\sigma^2$? \\ \newline  Having gained a really deep understanding of the PIFF paper\\
+\newline
+    \textbf{All this word vomit to say I'm looking for the relationship between these 3 matrices.\\
+    
+    \newline 
+    \noindent Do we have ''test stars"? What is their radius? Fisher-Rao Metrics\\ \newline}
+\noindent {\fbox{\it Reading}}\\ \newline
+Prior Probabilities Edwin T. Jaynes: \\
+\href{http://www.scholarpedia.org/article/Fisher-Rao_metric}{http://www.scholarpedia.org/article/Fisher-Rao_metric}
+Thought about this from the chi-square discussion\\
+\newpage
+\noindent \textbf{NB: Nearing end of semester and my school work is starting to increase a little bit. Wasn't able to do as much as I had set out this week.}
+\end{document}
+%%------------ Arman Shokrollahi--------------%%

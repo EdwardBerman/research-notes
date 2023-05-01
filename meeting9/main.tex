@@ -1,0 +1,118 @@
+%-----------------------Homework------------------------------------
+%-------------------Arman Shokrollahi---------------------------------
+%---------------------Coding Theory-------------------------------
+
+\documentclass[a4 paper]{article}
+% Set target color model to RGB
+\usepackage[inner=1.5cm,outer=1.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{setspace}
+\usepackage[rgb]{xcolor}
+\usepackage{pythonhighlight}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{pdfpages}
+\usepackage{verbatim}
+\usepackage{amsgen,amsmath,amstext,amsbsy,amsopn,tikz,amssymb,tkz-linknodes}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true, urlcolor=blue,  linkcolor=blue, citecolor=blue]{hyperref}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{rotating}
+%\usetikzlibrary{through,backgrounds}
+\hypersetup{%
+pdfauthor={Arman Shokrollahi},%
+pdftitle={Homework},%
+pdfkeywords={Tikz,latex,bootstrap,uncertaintes},%
+pdfcreator={PDFLaTeX},%
+pdfproducer={PDFLaTeX},%
+}
+%\usetikzlibrary{shadows}
+\usepackage[francais]{babel}
+\usepackage{booktabs}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+      \newtheorem{thm}{Theorem}[section]
+      \newtheorem{prop}[thm]{Proposition}
+      \newtheorem{lem}[thm]{Lemma}
+      \newtheorem{cor}[thm]{Corollary}
+      \newtheorem{defn}[thm]{Definition}
+      \newtheorem{rem}[thm]{Remark}
+      \numberwithin{equation}{section}
+
+\newcommand{\homework}[6]{
+   \pagestyle{myheadings}
+   \thispagestyle{plain}
+   \newpage
+   \setcounter{page}{1}
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{\vspace{2mm}
+    \hbox to 6.28in { {\bf JWST Project \hfill} }
+       \vspace{6mm}
+       \hbox to 6.28in { {\Large \hfill #1 (#2)  \hfill} }
+       \vspace{6mm}
+       \hbox to 6.28in { {\it Instructor: #3 \hfill Student: #5} }
+       %\hbox to 6.28in { {\it TA: #4  \hfill #6}}
+      \vspace{2mm}}
+   }
+   \end{center}
+   \markboth{#5 -- #1}{#5 -- #1}
+   \vspace*{4mm}
+}
+
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bepsilon}{\boldsymbol{\epsilon}}
+\newcommand{\balpha}{\boldsymbol{\alpha}}
+\newcommand{\bbeta}{\boldsymbol{\beta}}
+\newcommand{\0}{\mathbf{0}}
+
+\begin{document}
+\homework{Meeting Notes \#7}{due 04/26/23}{McCleary}{}{Eddie Berman}{}
+{\begin{tikzpicture}[outline/.style={draw=#1,thick,fill=#1!50}]
+\node [outline=red] at (0,1) {\bf Agenda};
+\end{tikzpicture}}
+\begin{enumerate}
+    \item Volunteer Assignment
+    \item Updates
+    \item PEAK Award =]
+\end{enumerate}
+
+\noindent {\fbox{\it Volunteer Assignment}}\\ 
+Finished\\
+\noindent {\fbox{\it Chi Square / Project Updates}}\\ \begin{enumerate}
+    \item Everything seems to work consistently now! 
+    \item I would now like to add more analytic profiles
+\end{enumerate}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.75]{learnedParameters.png}
+    \caption{Learned Parameters Average}
+    \label{fig:my_label}
+\end{figure}\\ \textbf{N.B. Legend is backwards}\\
+
+I want to add error bars next\\
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.75]{Together.png}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}\\
+Haven't yet tested, but started implementing a new radial profile (komolgorov)\\
+Finished enforcing constraints, however, I am curious to see how PIFF did this, I still need to dedicate more time into reverse engineering it. Also of note, I used the formula we talked about previously. I learned $e_1$ and $e_2$ and used that to determine $g_1$ and $g_2$.\\
+After that is working I will start doing the pixel grid stuff\\
+readME\\
+requirements.txt\\
+sum chi square\\
+pull master diagnostic\\
+dof = values - parameters to learn it\\
+Standardize color bar\\
+Power spectrum\\
+Simultaneous Fits\\
+``
+\end{document}
+
+%Jarvis
